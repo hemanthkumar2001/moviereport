@@ -1,0 +1,46 @@
+<div>
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input
+                type="text"
+                class="form-control"
+                id="title"
+                required
+                [(ngModel)]="Movie.title"
+                name="title"
+                />
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input
+                type="text"
+                class="form-control"
+                id="description"
+                required
+                [(ngModel)]="Movie.description"
+                name="description"
+                />
+            </div>
+
+            <button (click)="saveMovie()" class="btn btn-success">Submit</button>
+        </div>
+       <div *ngIf="submitted">
+        <h4>Movie was submitted successfully</h4>
+        <button (click)="AddMovie()">Add-Movie</button>
+       </div>
+      
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
